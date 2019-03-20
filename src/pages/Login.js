@@ -13,7 +13,7 @@ class Login extends Component {
             uid: this.state.username,
             password: this.state.password
         }).then((data)=>{
-            this.props.history.push('/studentdashboard')
+            this.props.history.push('/studentdashboard?uid='+data.data.uid)
             console.log(data)
         }).catch((err)=>{
         console.log(err)
