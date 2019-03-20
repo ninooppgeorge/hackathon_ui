@@ -1,25 +1,34 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Login from './pages/Login';
+
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import StudentDashboard from './pages/StudentDashboard';
+import HomePage from './pages/HomePage';
+import UniversityLogin from './pages/UniversityLogin';
+import UniversityDashboard from './pages/UniversityDashboard';
+import AddStudent from './pages/AddStudent';
+import AddCertificate from './pages/AddCertificate';
 
 class App extends Component {
+  
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Router>      
+          <div>
+            <Route path="/" component={Login} exact />
+            <Route path="/login" component={UniversityLogin} exact /> 
+
+            <Route path="/studentdashboard" component={StudentDashboard} exact /> 
+            <Route path="/universitydashboard" component={UniversityDashboard} exact /> 
+            
+            <Route path="/addstudent" component={AddStudent} exact /> 
+            <Route path="/addcertificate" component={AddCertificate} exact /> 
+
+
+          </div> 
+        </Router>
+          
       </div>
     );
   }

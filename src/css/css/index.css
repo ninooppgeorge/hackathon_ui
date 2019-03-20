@@ -1,0 +1,35 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif; }
+
+input {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 14px;
+  display: block;
+  margin: auto;
+  border: 2px solid #ddd;
+  margin-top: 20px;
+  width: 300px; }
+
+.button {
+  padding: 14px;
+  background: #f06;
+  display: block;
+  margin: auto;
+  color: #fff;
+  border-radius: 4px;
+  margin-top: 20px;
+  width: 300px;
+  font-weight: bold; }
+
+.App {
+  text-align: center; }
+
+.list div span {
+  padding: 0px 20px; }
+
+/*# sourceMappingURL=index.css.map */
