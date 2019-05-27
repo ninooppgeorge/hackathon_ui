@@ -26,12 +26,12 @@ class UniversityDashboard extends Component {
   render() {
     return (
       <div className="App">
-        <h2>University Dashboard</h2>
+        <h2 className="headh2">University Dashboard</h2>
         <div className="list">
           {
               this.state.data.map((dt,index)=>{
                   return (
-                      <div key={index} onClick={this.gotoaddc.bind(this,dt.uid)}>
+                      <div key={index} className="listinner" onClick={this.gotoaddc.bind(this,dt.uid)}>
                           <span>{dt.name}</span>
                           <span>{dt.uid}</span>
                           <span>{dt.course}</span>

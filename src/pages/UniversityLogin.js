@@ -23,7 +23,7 @@ class UniversityLogin extends Component {
   render() {
     return (
       <div className="App">
-        <h2>University Login</h2>
+        <h2 className="headh2">University Login</h2>
         <input type="text" placeholder="username" onChange={(e)=>this.setState({username:e.target.value})}/>
         <input type="password" placeholder="password" onChange={(e)=>this.setState({password:e.target.value})}/>
         <a onClick={this.login.bind(this)} className="button">Login</a>

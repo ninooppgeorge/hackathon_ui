@@ -21,7 +21,7 @@ class AddStudent extends Component {
   render() {
     return (
       <div className="App">
-        <h2>Add Student</h2>
+        <h2 className="headh2">Add Student</h2>
 
         <input type="text" placeholder="uid" onChange={(e)=>this.setState({uid:e.target.value})}/>
         <input type="text" placeholder="name" onChange={(e)=>this.setState({name:e.target.value})}/>

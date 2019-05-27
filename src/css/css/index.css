@@ -29,7 +29,19 @@ input {
 .App {
   text-align: center; }
 
-.list div span {
-  padding: 0px 20px; }
+.headh2 {
+  background: #462F89;
+  padding: 15px;
+  color: #fff; }
+
+.list {
+  padding: 0% 30%; }
+  .list div span {
+    padding: 0px 20px; }
+  .list .listinner {
+    border: 1px solid #ddd;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 7px; }
 
 /*# sourceMappingURL=index.css.map */

@@ -30,10 +30,22 @@ input{
 .App{
     text-align: center;
 }
+.headh2{
+    background: #462F89;
+    padding: 15px;
+    color: #fff;
+}
 .list{
+    padding: 0% 30%;
     div{
         span{
             padding: 0px 20px;
         }
+    }
+    .listinner{
+        border: 1px solid #ddd;
+        padding: 10px;
+        cursor: pointer;
+        margin-top: 7px;
     }
 }

@@ -1,6 +1,6 @@
 let config = {
-    serverurl: 'http://35.229.77.237',
-    local: 'http://35.229.77.237',
+    serverurl: 'http://34.73.128.20',
+    local: 'http://34.73.128.20',
     // local: 'http://localhost'
 }
 

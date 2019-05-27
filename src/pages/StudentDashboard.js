@@ -7,6 +7,7 @@ class StudentDashboard extends Component {
         uid: '',
         name: '',
         course: '',
+        datad: []
     }
   componentDidMount(){
     let iid = this.props.location.search;
@@ -14,11 +15,17 @@ class StudentDashboard extends Component {
     console.log(iid)
       Axios.get(config.local+'/student/list?uid='+iid).then((data)=>{
             console.log(data.data);
-            this.setState({
+            Axios.get(config.local+'/certificate/list?uid='+iid).then((datad)=>{
+              this.setState({
                 uid:data.data.uid,
                 name:data.data.name,
-                course:data.data.course
+                course:data.data.course,
+                datad: datad.data
+              })
+              }).catch((err)=>{
+                  console.log(err);
             })
+            
         }).catch((err)=>{
             console.log(err);
 
@@ -27,13 +34,23 @@ class StudentDashboard extends Component {
   render() {
     return (
       <div className="App">
-        Student dashboard
+        <h2 className="headh2">Student dashboard</h2>
         <br/>
-        uid: {this.state.uid}
+
+        <p>
+          {this.state.uid} &nbsp;&nbsp;&nbsp;<strong>Name:</strong> {this.state.name} &nbsp;&nbsp;&nbsp;<strong>course:</strong> {this.state.course}
+        </p>
         <br/>
-        name: {this.state.name}
-        <br/>
-        course: {this.state.course}
+        <div className="list">
+          {this.state.datad.map((dt,index)=>{
+              return(
+                  <div key={index} className="listinner">
+                      <span>{dt.name} </span>
+                      <span><a target="_blank" href={config.serverurl+"/ipfs/get?id="+dt.ipfsid}>{dt.ipfsid}</a></span>
+                  </div>
+              )
+          })}
+        </div>
       </div>
     );
   }

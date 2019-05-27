@@ -15,7 +15,7 @@ class AddCertificate extends Component {
             this.setState({
                 data: data.data
             })
-            alert('success');
+            // alert('success');
         }).catch((err)=>{
             console.log(err);
 
@@ -47,15 +47,15 @@ class AddCertificate extends Component {
   render() {
     return (
       <div className="App">
-        <h2>Certificates</h2>
+        <h2 className="headh2">Certificates</h2>
         <br/>
         <br/>
       <div className="list">
         {this.state.data.map((dt,index)=>{
             return(
-                <div key={index}>
+                <div key={index} className="listinner">
                     <span>{dt.name} </span>
-                    <span><a target="_blank" href={"http://35.185.72.227/ipfs/get?id="+dt.ipfsid}>{dt.ipfsid}</a></span>
+                    <span><a target="_blank" href={config.serverurl+"/ipfs/get?id="+dt.ipfsid}>{dt.ipfsid}</a></span>
                 </div>
             )
         })}
